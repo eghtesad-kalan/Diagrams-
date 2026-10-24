@@ -1,0 +1,84 @@
+<!DOCTYPE html><html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>نمودارهای تعاملی بازار پول — اقتصاد کلان، فصل ۴</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#14213d;--bl:#1f6fb5;--or:#e8590c;--mu:#5b6b84;--bg:#f3f6fb}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.9 Vazirmatn,Tahoma,sans-serif}
+header,main,footer{max-width:1040px;margin:auto;padding:0 16px}
+header{padding-top:26px}h1{font-size:clamp(21px,4vw,32px);margin:0}header p{color:var(--mu);margin:2px 0 12px}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);display:flex;gap:8px;overflow-x:auto;padding:10px 16px;border-bottom:1px solid #dbe3f0}
+nav button{flex:none;background:#fff;color:var(--mu);border:1px solid #cdd7e8;border-radius:20px;padding:4px 16px;font:inherit;font-size:14px;cursor:pointer}
+nav button.on{background:var(--ink);color:#fff;border-color:var(--ink);font-weight:700}
+h2{margin:20px 0 0;font-size:22px}.nt{color:var(--mu);margin:0 0 12px}
+.c{display:grid;gap:12px}@media(min-width:820px){.c.two{grid-template-columns:1fr 1fr}.c.two svg:nth-child(3){grid-column:1/-1;max-width:640px;margin:auto}}
+svg{width:100%;background:#fff;border-radius:12px;border:1px solid #dbe3f0;display:block}
+.gr{stroke:#eef1f7}.ax{stroke:#1f6fb5;stroke-width:2.5}
+.tk{fill:#5b6b84;font-size:12px;text-anchor:middle}.en{text-anchor:end}.st{text-anchor:start}
+.lb{fill:#111;font-size:18px;text-anchor:middle;font-family:Georgia,'Times New Roman',serif;font-style:italic}.lp{font-family:Vazirmatn,Tahoma,sans-serif;font-style:normal;font-size:14px;font-weight:700}
+.or{fill:#e8590c}.rd{fill:#c92a2a}.gy{fill:#7a869c}
+.cv{stroke:#111;stroke-width:3.5;fill:none}.gh{stroke:#9aa7bd;stroke-width:3;stroke-dasharray:8 6;fill:none}
+.gd{stroke:#333;stroke-width:1.6;stroke-dasharray:6 5}.hl{stroke:#e8590c;stroke-width:7}.br{stroke:#c92a2a;stroke-width:7}
+.pt{fill:#e8590c;stroke:#fff;stroke-width:2}.p0{fill:#fff;stroke:#7a869c;stroke-width:2.5}
+.ctl{background:#fff;border:1px solid #dbe3f0;border-radius:12px;padding:12px 16px;margin-top:12px;display:grid;gap:6px}
+.ctl label{display:grid;grid-template-columns:190px 1fr 80px;gap:10px;align-items:center;font-size:15px}
+.ctl b{color:var(--or);text-align:left;direction:ltr}input{accent-color:#e8590c;width:100%}
+.bts{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.bts button{background:var(--ink);color:#fff;border:0;border-radius:8px;padding:5px 14px;font:700 14px Vazirmatn,Tahoma,sans-serif;cursor:pointer}
+#rd{background:#fff;border-right:4px solid var(--or);border-radius:8px;padding:10px 14px;margin-top:12px}
+footer{color:var(--mu);font-size:13px;padding:20px 16px 40px}
+@media(max-width:560px){.ctl label{grid-template-columns:1fr 70px}.ctl label span{grid-column:1/3}}
+</style></head><body>
+<header><h1>تقاضا، عرضه و تعادل بازار پول</h1><p>اقتصاد کلان نظری — فصل ۴ · نمودارها مطابق شکل‌های کتاب؛ لغزنده‌ها را حرکت دهید</p></header>
+<nav id="nv"></nav>
+<main><h2 id="ti"></h2><p class="nt" id="nt"></p><div class="c" id="c"></div><div class="ctl" id="ct"></div><div id="rd"></div></main>
+<footer>الگوی کتاب: تقاضای معاملاتی M<sub>t</sub> = KY و تقاضای سفته‌بازی M<sub>Sp</sub> = F(r) (نزولی و محدب، با کف نرخ بهره)، و عرضه‌ی عمودی M<sup>S</sup> = M<sub>0</sub><sup>S</sup>. تابع F(r) این صفحه برای رسم شکل کتاب، یک هذلولی آموزشی است: F(r) = ۶۰۰ / (r − ۲). اعداد نمونه‌اند و آمار واقعی نیستند؛ شکل ساده‌ی خطی M<sup>D</sup> در کتاب، تقریبی از همین منحنی است.</footer>
+<script>
+const $=i=>document.getElementById(i),f=n=>Math.round(n).toLocaleString('fa-IR'),f1=n=>(Math.round(n*10)/10).toLocaleString('fa-IR'),L=s=>`<bdi dir="ltr">${s}</bdi>`;
+const X0=70,X1=570,Y0=340,Y1=40,B=600,R0=2,Fm=r=>B/(r-R0),rs=(M,Mt)=>R0+B/(M-Mt);
+const SUP=s=>`<tspan dy="-7" font-size="12">${s}</tspan><tspan dy="7">&#8203;</tspan>`,SUB=s=>`<tspan dy="5" font-size="12">${s}</tspan><tspan dy="-5">&#8203;</tspan>`;
+const mt=`M${SUB('t')}`,msp=`M${SUB('Sp')}`,MS=`M${SUP('S')}`,MD=`M${SUP('D')}`;
+const tt=(x,y,s,c='lb')=>`<text class="${c}" x="${x}" y="${y}">${s}</text>`,pt=(x,y,r=7,c='pt')=>`<circle class="${c}" cx="${x}" cy="${y}" r="${r}"/>`;
+function C(xm,ym,xs,ys,xl,yl,xn,yn){const x=v=>X0+v/xm*(X1-X0),y=v=>Y0-v/ym*(Y0-Y1);let a=`<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1f6fb5"/></marker><clipPath id="cp"><rect x="${X0}" y="${Y1}" width="${X1-X0}" height="${Y0-Y1}"/></clipPath></defs>`;
+for(let i=0;i<=xs;i++){const u=x(xm*i/xs);a+=`<line class="gr" x1="${u}" y1="${Y1}" x2="${u}" y2="${Y0}"/>`+(i?tt(u,Y0+18,f(xm*i/xs),'tk'):'')}
+for(let i=0;i<=ys;i++){const u=y(ym*i/ys);a+=`<line class="gr" x1="${X0}" y1="${u}" x2="${X1}" y2="${u}"/>`+tt(X0-8,u+4,f(ym*i/ys),'tk en')}
+a+=`<line class="ax" x1="${X0}" y1="${Y0}" x2="${X0}" y2="${Y1-14}" marker-end="url(#ah)"/><line class="ax" x1="${X0}" y1="${Y0}" x2="${X1+16}" y2="${Y0}" marker-end="url(#ah)"/>`+tt(X0+14,Y1-10,yl,'lb st')+tt(X1+22,Y0+6,xl,'lb st')+tt((X0+X1)/2,Y0+46,xn,'tk')+`<text class="tk" transform="rotate(-90 20 190)" x="20" y="190">${yn}</text>`;
+return{x,y,a}}
+const gd=(g,vx,vy)=>`<line class="gd" x1="${X0}" y1="${g.y(vy)}" x2="${g.x(vx)}" y2="${g.y(vy)}"/><line class="gd" x1="${g.x(vx)}" y1="${g.y(vy)}" x2="${g.x(vx)}" y2="${Y0}"/>`,
+rr=(a,b,s)=>{const o=[];for(let r=a;r>=b-1e-9;r-=s)o.push(r);return o},
+MDp=Mt=>rr(14,2.4,.1).map(r=>[Mt+Fm(r),r]),
+PL=(g,p,c)=>`<polyline class="${c}" clip-path="url(#cp)" points="${p.map(q=>g.x(q[0]).toFixed(1)+','+g.y(q[1]).toFixed(1)).join(' ')}"/>`,
+VL=(g,m,c,t=13.2)=>`<line class="${c}" x1="${g.x(m)}" y1="${g.y(0)}" x2="${g.x(m)}" y2="${g.y(t)}"/>`;
+const SC=[
+{k:'۱ تقاضای پول به روش نموداری',nt:'تقاضای کل پول جمع افقی دو بخش است: تقاضای معاملاتی (تابع درآمد) و تقاضای سفته‌بازی (تابع نرخ بهره).',
+sl:[['Y','درآمد (Y₁)',600,1200,50,1000],['k','ضریب K',.2,.4,.05,.3],['r','نرخ بهره (r)',3,12,.5,6,'٪']],
+dr:v=>{const Mt=v.k*v.Y,Ms=Fm(v.r),A=C(1400,600,7,6,'Y',mt,'درآمد','تقاضای معاملاتی'),Bc=C(800,14,8,7,msp,'r','تقاضای سفته‌بازی','نرخ بهره'),D=C(1200,14,6,7,'M','r','مقدار پول','نرخ بهره');
+const a=A.a+`<line class="cv" x1="${A.x(0)}" y1="${A.y(0)}" x2="${A.x(1400)}" y2="${A.y(v.k*1400)}"/>`+gd(A,v.Y,Mt)+pt(A.x(v.Y),A.y(Mt))+tt(A.x(v.Y),Y0+36,`Y${SUB('1')}`,'lb or')+tt(A.x(760),A.y(v.k*1000)-6,`${mt} = KY`),
+b=Bc.a+PL(Bc,rr(14,2.7,.1).map(r=>[Fm(r),r]),'cv')+`<line class="gd" x1="${X0}" y1="${Bc.y(R0)}" x2="${X1}" y2="${Bc.y(R0)}"/>`+tt(Bc.x(500),Bc.y(R0)-8,'کف نرخ بهره (تله نقدینگی)','tk')+gd(Bc,Ms,v.r)+pt(Bc.x(Ms),Bc.y(v.r))+tt(Bc.x(330),Bc.y(9),`${msp} = F(r)`),
+c=D.a+PL(D,MDp(0),'gh')+PL(D,MDp(Mt),'cv')+`<line class="hl" x1="${D.x(Ms)}" y1="${D.y(v.r)}" x2="${D.x(Mt+Ms)}" y2="${D.y(v.r)}"/>`+pt(D.x(Ms),D.y(v.r),6,'p0')+pt(D.x(Mt+Ms),D.y(v.r))+gd(D,Mt+Ms,v.r)+tt(D.x(Ms/2),D.y(v.r)-10,msp,'lb gy')+tt(D.x(Ms+Mt/2),D.y(v.r)+24,mt,'lb or')+tt(D.x(Mt+Fm(11.5))+8,D.y(12.6),`${MD}(Y${SUB('1')})`,'lb st');
+return{s:[a,b,c],i:`${L('M<sub>t</sub> = K·Y<sub>1</sub> = '+f1(v.k)+' × '+f(v.Y)+' = '+f(Mt))}<br>${L('M<sub>Sp</sub> = F(r) = '+f(Ms))} در نرخ ${f1(v.r)}٪<br>${L('M<sup>D</sup> = M<sub>t</sub> + M<sub>Sp</sub> = '+f(Mt+Ms))}<br>تغییر r، حرکت روی منحنی M<sup>D</sup> است؛ تغییر Y یا K کل منحنی را به راست یا چپ می‌برد.`}}},
+{k:'۲ عرضه پول',nt:'عرضه پول را بانک مرکزی تعیین می‌کند و به نرخ بهره وابسته نیست؛ پس منحنی عرضه خط عمودی است.',
+sl:[['M','عرضه پول (M₀ˢ)',200,1000,50,500],['r','نرخ بهره (r)',1,13,.5,6,'٪']],
+dr:v=>{const S=C(1000,14,10,7,MS,'r','مقدار عرضه پول','نرخ بهره');
+return{s:[S.a+(v.M!=500?VL(S,500,'gh'):'')+VL(S,v.M,'cv')+tt(S.x(v.M),S.y(13.2)-10,`${MS} = M${SUB('0')}${SUP('S')}`)+gd(S,v.M,v.r)+pt(S.x(v.M),S.y(v.r))+tt(S.x(v.M),Y0+34,f(v.M),'lb or')],
+i:`${L('M<sup>S</sup> = M<sub>0</sub><sup>S</sup> = '+f(v.M))} — نرخ بهره را بین ۱ تا ۱۳ تغییر دهید: نقطه فقط روی خط عمودی بالا و پایین می‌رود و مقدار عرضه تغییر نمی‌کند. با تغییر M₀ˢ کل خط جابه‌جا می‌شود.`}}},
+{k:'۳ تعادل بازار پول',nt:'تعادل در تقاطع M^D و M^S است. نرخ بهره را دور از تعادل ببرید و «تعدیل خودکار» را بزنید.',
+sl:[['Y','درآمد (Y₁)',600,1200,50,1000],['M','عرضه پول (M₀ˢ)',450,800,25,500],['rt','نرخ بهره بازار',3,12,.1,8,'٪']],
+bt:[['تعدیل خودکار نرخ بهره','adj'],['افزایش عرضه پول',{M:700,rt:5,go:1}],['افزایش درآمد',{Y:1200,rt:5,go:1}],['بازنشانی',{Y:1000,M:500,rt:8}]],
+dr:v=>{const Mt=.3*v.Y,re=rs(v.M,Mt),r1=rs(500,300),ch=v.Y!=1000||v.M!=500,E=C(1200,14,6,7,`${MS}, ${MD}`,'r','مقدار پول','نرخ بهره'),md=Mt+Fm(v.rt),ex=v.rt-re,pb=r=>100/(1+r/100);
+let s=E.a+(ch?PL(E,MDp(300),'gh')+VL(E,500,'gh'):'')+PL(E,MDp(Mt),'cv')+VL(E,v.M,'cv')+tt(E.x(v.M),E.y(13.2)-10,`${MS} = M${SUB('0')}${SUP('S')}`)+tt(E.x(Mt+Fm(11.5))+8,E.y(12.6),`${MD}(Y${SUB('1')})`,'lb st')+tt(E.x(v.M),Y0+34,`${MD} = ${MS}`)+(ch?pt(E.x(500),E.y(r1),8,'p0')+tt(E.x(500)-26,E.y(r1)+22,`E${SUB('1')}`,'lb gy'):'')+gd(E,v.M,re)+pt(E.x(v.M),E.y(re),9)+tt(E.x(v.M)+28,E.y(re)-12,`E${SUB(ch?'2':'1')}`,'lb or');
+if(Math.abs(ex)>.05)s+=`<line class="br" x1="${E.x(md)}" y1="${E.y(v.rt)}" x2="${E.x(v.M)}" y2="${E.y(v.rt)}"/>`+pt(E.x(md),E.y(v.rt),6,'p0')+pt(E.x(v.M),E.y(v.rt),6,'p0')+tt((E.x(md)+E.x(v.M))/2,E.y(v.rt)+(ex>0?-12:28),ex>0?'مازاد عرضه پول':'مازاد تقاضای پول','lb lp rd');
+return{s:[s],i:Math.abs(ex)<=.05?`تعادل: ${L('M<sup>D</sup> = M<sup>S</sup> = '+f(v.M))} در نرخ بهره ${f1(re)}٪؛ قیمت اوراق (یک‌ساله، ارزش اسمی ۱۰۰): ${L(f1(pb(re)))}.`:`نرخ ${f1(v.rt)}٪: ${L('M<sup>D</sup> = '+f(md))} در برابر ${L('M<sup>S</sup> = '+f(v.M))}. `+(ex>0?`مازاد عرضه ← مردم پول اضافه را صرف خرید اوراق می‌کنند ← قیمت اوراق ↑ (${f1(pb(v.rt))} → ${f1(pb(re))}) ← نرخ بهره ↓`:`مازاد تقاضا ← مردم اوراق می‌فروشند ← قیمت اوراق ↓ (${f1(pb(v.rt))} → ${f1(pb(re))}) ← نرخ بهره ↑`)+(ch?`<br>خط‌چین‌های خاکستری: تعادل اولیه (E₁ در نرخ ${f1(r1)}٪).`:'')}}}
+];
+let cur=0,V={},tm;
+const sync=()=>SC[cur].sl.forEach(a=>{$('i'+a[0]).value=V[a[0]];$('o'+a[0]).textContent=f1(V[a[0]])+(a[6]||'')});
+function draw(){const r=SC[cur].dr(V);$('c').className='c'+(r.s.length>1?' two':'');$('c').innerHTML=r.s.map(x=>`<svg viewBox="0 0 640 400">${x}</svg>`).join('');$('rd').innerHTML=r.i}
+function adj(){clearInterval(tm);tm=setInterval(()=>{const re=rs(V.M,.3*V.Y);V.rt+=(re-V.rt)*.08;if(Math.abs(V.rt-re)<.03){V.rt=re;clearInterval(tm)}sync();draw()},30)}
+function build(i){clearInterval(tm);cur=i;const s=SC[i];V={};s.sl.forEach(a=>V[a[0]]=a[5]);
+[...$('nv').children].forEach((b,j)=>b.className=j==i?'on':'');$('ti').textContent=s.k.slice(2);$('nt').textContent=s.nt;
+$('ct').innerHTML=s.sl.map(a=>`<label><span>${a[1]}</span><input id="i${a[0]}" type="range" min="${a[2]}" max="${a[3]}" step="${a[4]}"><b id="o${a[0]}"></b></label>`).join('')+(s.bt?`<div class="bts">${s.bt.map((b,j)=>`<button data-j="${j}">${b[0]}</button>`).join('')}</div>`:'');
+s.sl.forEach(a=>$('i'+a[0]).oninput=e=>{clearInterval(tm);V[a[0]]=+e.target.value;sync();draw()});
+if(s.bt)[...$('ct').querySelectorAll('.bts button')].forEach(b=>b.onclick=()=>{const a=s.bt[b.dataset.j][1];if(a=='adj')adj();else{const go=a.go;Object.keys(a).forEach(k=>{if(k!='go')V[k]=a[k]});sync();draw();if(go)adj()}});
+sync();draw()}
+SC.forEach((s,i)=>{const b=document.createElement('button');b.textContent=s.k;b.onclick=()=>build(i);$('nv').appendChild(b)});
+build(0);
+</script></body></html>
